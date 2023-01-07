@@ -7,7 +7,7 @@ hv-loader:
   hv-chart-2: ["assets/img/crash_data_heatmap_time.html", "500", "800"]
   hv-chart-3: ["assets/img/crash_data_heatmap_days.html", "500", "800"]
   hv-chart-4: ["assets/img/crash_data_heatmap_months.html", "500", "800"]
-  hv-chart-5: ["assets/img/center_crash_index.html", "500", "800"]
+  hv-chart-5: ["assets/img/center_crash_index_c.html", "500", "800"]
   hv-chart-6: ["assets/img/center_crash_index_n.html", "500", "800"]
   hv-chart-7: ["assets/img/center_crash_index_s.html", "500", "800"]
 
