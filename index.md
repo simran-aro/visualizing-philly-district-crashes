@@ -3,7 +3,7 @@ layout: default
 altair-loader:
   altair-chart-1: "charts/measlesAltair.json"
 hv-loader:
-  hv-chart-1: ["img/crash_data_heatmap.html", "200", "500"] # second argument is the desired height
+  hv-chart-1: ["assets/img/crash_data_heatmap.html", "200", "500"] # second argument is the desired height
 folium-loader:
   folium-chart-1: ["charts/foliumChart.html", "400"] # second argument is the desired height
   folium-chart-2: ["charts/percent_no_internet.html", "400"] # second argument is the desired height
@@ -23,19 +23,19 @@ To create the crash index, nearest nodes from each crash were extracted. A datas
 
 Philadelphia's Central District
 
-![phl-central]({{ site.url }}{{ site.baseurl }}/images/central.png)
+![phl-central]({{ site.url }}{{ site.baseurl }}/assets/img/central.png)
 
 Philadelphia's North District
 
-![phl-north]({{ site.url }}{{ site.baseurl }}/images/north.png)
+![phl-north]({{ site.url }}{{ site.baseurl }}/assets/img/north.png)
 
 Philadelphia's South District
 
-![phl-south]({{ site.url }}{{ site.baseurl }}/images/south.png)
+![phl-south]({{ site.url }}{{ site.baseurl }}/assets/img/south.png)
 
 ## Philadelphia's Crashes in 2021, visualized
 
-![crashes]({{ site.url }}{{ site.baseurl }}/images/crashes.png)
+![crashes]({{ site.url }}{{ site.baseurl }}/assets/img/crashes.png)
 
 While this map indicates crashes, it is difficult to read because all the dots are the same size. The density of crashes is definitely higher in some districts. A better visualization method is to create a heatmap. The following map is a heatmap of the data shown in the image above. In it we see that Central, North and South districts in Philadelphia are where crashes occur more. Thus, I chose to analyze these further. 
 
