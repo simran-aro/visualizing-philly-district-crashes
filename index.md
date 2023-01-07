@@ -3,13 +3,17 @@ layout: default
 altair-loader:
   altair-chart-1: "charts/measlesAltair.json"
 hv-loader:
-  hv-chart-1: ["assets/img/crash_data_heatmap.html", "200", "500"] # second argument is the desired height
-folium-loader:
-  folium-chart-1: ["charts/foliumChart.html", "400"] # second argument is the desired height
-  folium-chart-2: ["charts/percent_no_internet.html", "400"] # second argument is the desired height
+  hv-chart-1: ["assets/img/crash_data_heatmap.html", "500", "800"] 
+  hv-chart-2: ["assets/img/crash_data_heatmap_time.html", "500", "800"]
+  hv-chart-3: ["assets/img/crash_data_heatmap_days.html", "500", "800"]
+  hv-chart-4: ["assets/img/crash_data_heatmap_months.html", "500", "800"]
+  hv-chart-5: ["assets/img/center_crash_index.html", "500", "800"]
+  hv-chart-6: ["assets/img/center_crash_index_n.html", "500", "800"]
+  hv-chart-7: ["assets/img/center_crash_index_s.html", "500", "800"]
+
 ---
 
-# Introduction!
+# Introduction
 
 PennDOT collects and shares data on crashes for every year to increase education and awareness around safety. This data can be found [here](https://www.penndot.pa.gov/TravelInPA/Safety/pages/crash-facts-and-statistics.aspx). In this project, data from PennDOT was analyzed for three Philadelphia districts: North, Central and South. This project aims to create spatial components for this data to visualize where crashes are happening, and to create a crash index. This was done with the help of several packages developed for geospatial analysis in Python including OSMnx and folium, along with other packages like matplotlib, geopandas and altair to create charts.
 
@@ -41,45 +45,42 @@ While this map indicates crashes, it is difficult to read because all the dots a
 
 <div id="hv-chart-1"></div>
 
+The following visualization shows the hours of the day when crashes occur. Do you see any patterns? There are more crashes during the evening- the time when folks are going home during work. Another high incidence time is morning rush hours. I used the same method to see if there were any patterns for days of the week and months. While the visualization for months did not give any conclusive answers, weekends were certainly days when crashes occured more. 
 
+#### Crashes aggregated by hour of day
 
-<div id="altair-chart-1"></div>
+<div id="hv-chart-2"></div>
 
-This was produced using Altair and embedded in this static web page. Note that you can also display Python code on this page:
+#### Crashes aggregated by day of week
 
-```python
-import altair as alt
-alt.renderers.enable('notebook')
-```
+<div id="hv-chart-3"></div>
 
-## HvPlot Example
+#### Crashes by months of 2021
 
-Lastly, the measles incidence produced using the HvPlot package:
+<div id="hv-chart-4"></div>
 
+## Crash Index
 
+To create the crash index, the number of crashes per street was divided by the lenght of the street. This number was log transformed and then normalized into an index. The lower the number the more dangerous the street is. The frequency of the index is visualized in the graphs below, for every district.
 
-## Notes
+![g1]({{ site.url }}{{ site.baseurl }}/assets/img/central_crash_ind.png)
 
-- See the [lecture 13A slides](https://musa-550-fall-2021.github.io/slideslecture-13A.html) for the code that produced these plots.
+![g2]({{ site.url }}{{ site.baseurl }}/assets/img/north_crash_ind.png)
 
-**Important: When embedding charts, you will likely need to adjust the width/height of the charts before embedding them in the page so they fit nicely when embedded.**
+![g3]({{ site.url }}{{ site.baseurl }}/assets/img/south_crash_ind.png)
 
-# Example: Embedding Folium charts
+## Spatializing the Crash Index for the Three Districts
 
-This post will show examples of embedding interactive maps produced using [Folium](https://github.com/python-visualization/folium).
+The darker the color, the more crashes that have happened on that street. The yellow streets represent those that have no crashes. It can be seen that highways and larger roads are the ones that perform poorly on the crash index.
 
-## OSMnx and Street Networks
+Central District
 
-The shortest route between the Art Museum and the Liberty Bell:
+<div id="hv-chart-5"></div>
 
-<div id="folium-chart-1"></div>
+North District
 
-<br/>
+<div id="hv-chart-6"></div>
 
-## Percentage of Households without Internet
+South District
 
-The percentage of households without internet by county:
-
-<div id="folium-chart-2"></div>
-
-See the [lecture 9B slides](https://musa-550-fall-2021.github.io/slides/lecture-9B.html) and the [lecture 10A slides](https://musa-550-fall-2021.github.io/slides/lecture-10A.html) for the code that produced these plots.
+<div id="hv-chart-6"></div>
