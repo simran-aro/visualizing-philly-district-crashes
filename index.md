@@ -65,7 +65,7 @@ To create the crash index, the number of crashes per street was divided by the l
 
 ![g1]({{ site.url }}{{ site.baseurl }}/assets/img/central_crash_ind.png)
 
-![g2]({{ site.url }}{{ site.baseurl }}/assets/img/north_crash_ind.png)
+![g2]({{ site.url }}{{ site.baseurl }}/assets/img/north_crash_index.png)
 
 ![g3]({{ site.url }}{{ site.baseurl }}/assets/img/south_crash_ind.png)
 
@@ -83,4 +83,4 @@ North District
 
 South District
 
-<div id="hv-chart-6"></div>
+<div id="hv-chart-7"></div>
